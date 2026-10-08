@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer components {
+    @keyframes marqueeScroll {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@layer base {
+    :root {
+        --ink: #111827;
+        --muted: #64748b;
+        --line: #e2e8f0;
+        --accent: #16a34a;
+    }
+
+    body {
+        background: #ffffff;
+        color: var(--ink);
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    ::selection {
+        background: #bbf7d0;
+        color: #14532d;
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.surface-grid {
+    background-image: linear-gradient(rgba(148, 163, 184, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, .08) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
